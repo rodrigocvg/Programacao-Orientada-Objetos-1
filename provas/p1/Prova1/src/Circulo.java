@@ -1,16 +1,18 @@
 
 
 public class Circulo {
-    private float pontoCentral;
+    private String pontoCentral;
     private float raio;
     private double area; 
+
+
     public Circulo(){
       
     
     }
 
-    public Circulo(float pC, float r){
-        this.pontoCentral = pC;
+    public Circulo(Ponto p, float r){
+        this.pontoCentral = "(" + p.getX() + "," + p.getY()+ ")";
         this.raio = r;
     }
 
@@ -26,15 +28,20 @@ public class Circulo {
     }
 
 
-    public float getPontoCentral() {
-        return pontoCentral;
-    }
+
+
+    
     public float getRaio() {
         return raio;
     }
-    public void setPontoCentral(float pontoCentral) {
+    public String getPontoCentral() {
+        return pontoCentral;
+    }
+    public void setPontoCentral(String pontoCentral) {
         this.pontoCentral = pontoCentral;
     }
+    
+    
     public void setRaio(float raio) {
         this.raio = raio;
     }

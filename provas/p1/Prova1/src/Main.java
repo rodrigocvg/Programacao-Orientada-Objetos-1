@@ -4,9 +4,12 @@ public class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("Informe os dados que definem o circulo: ");
         Scanner sc = new Scanner(System.in);
-        float p = sc.nextFloat();
+        float x = sc.nextFloat();
+        float y = sc.nextFloat();
+        Ponto p1 = new Ponto(x,y);
+
         float r = sc.nextFloat();
-        Circulo c1 = new Circulo(p,r);
+        Circulo c1 = new Circulo(p1,r);
         double area = c1.area();
         System.out.println("A área do ponto é "+ area);
 
@@ -17,6 +20,7 @@ public class Main {
         System.out.println("O perimetro é "+perimetro);
 
         Circulo []c = new Circulo[30];
+        Ponto []p = new Ponto[30];
 
         int n;
         System.out.println("Digite quantos círculos deseja criar: ");
@@ -24,22 +28,27 @@ public class Main {
         int i =0;
         int j =0;
         for(i=0;i<n;i++){
-            float pontC[] = new float[30];
+            System.out.println("Digite o ponto e o raio: ");
+            float x1[] = new float[30];
+            float y1[] = new float[30];
+            x1[i] = sc.nextFloat();
+            y1[i] = sc.nextFloat();
+            p[i] = new Ponto(x1[i], y1[i]);
+
             float raio[] = new float[30];
-            System.out.println("Digite o ponto central e o raio: ");
-            pontC[i] = sc.nextFloat();
+            
             raio[i] = sc.nextFloat();
-            c[i] = new Circulo(pontC[i],raio[i]);
+            c[i] = new Circulo(p[i],raio[i]);
         }
 
 
-       //1 for(j=0;j<n;j++){
-        //    System.out.println("O ponto "+ i  + "tem ponto central = " + c[i].getPontoCentral() + "e raio = " + c[i].getRaio() );
-       // }
+       for(i=0;i<n;i++){
+          System.out.println("O ponto "+ i  + " tem ponto central = " + c[i].getPontoCentral() + " e raio = " + c[i].getRaio() );
+        }
 
         double maior = 0;
         double area1 = 0;
-        for(j=0;j<n;j++){
+        for(i=0;i<n;i++){
                 if(c[i].getArea()>maior){
                     area1 = c[i].getArea();
                     area1  = maior;
