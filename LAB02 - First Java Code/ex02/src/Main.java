@@ -36,6 +36,8 @@ public class Main {
 
         c1.comprar(p1,f1);
 
+        
+
         sc.close();
 
 

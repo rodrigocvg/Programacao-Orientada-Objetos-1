@@ -2,6 +2,9 @@ public class No {
 	private int elemento; 
 	private No proximo;
 	
+	public No(){
+		proximo = null;
+	}
 	
 	public No(int elemento, No proximo) {
 		this.elemento = elemento;
