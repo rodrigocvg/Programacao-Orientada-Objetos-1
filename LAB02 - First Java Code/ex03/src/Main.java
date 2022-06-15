@@ -57,6 +57,14 @@ public class Main {
         p[p5].ind_diag(cord1);
 
 
+        System.out.println("Calcular área dos pontos: ");
+        System.out.println("Digite os pontos que deseja calcular a área: ");
+        int p6 = sc.nextInt();
+        int p7 = sc.nextInt();
+        float area;
+        area = p[p6].calc_area(p[p6], p[p7]);
+        System.out.println("A área é: " + area);
+
         sc.close();
 
         

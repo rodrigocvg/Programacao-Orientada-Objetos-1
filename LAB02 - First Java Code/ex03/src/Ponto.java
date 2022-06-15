@@ -41,7 +41,11 @@ public class Ponto {
         c.y = y1;
     }
 
-    public void calc_area(Ponto a, Ponto b){
+    public float calc_area(Ponto a, Ponto b){
+        float area;
+        area = a.y * b.y;
+
+        return area;
 
     }
 
