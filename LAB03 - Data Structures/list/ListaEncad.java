@@ -15,7 +15,7 @@ public class ListaEncad {
     public void push_back(int i){
         No fim = prim;
         No inicio = prim;
-        
+        s
     }
 
     public void insert(int pos){
