@@ -13,14 +13,47 @@ public class ListaEncad {
     }
 
     public void push_back(int i){
-        No fim = prim;
+        No fimL = prim;
         No inicio = prim;
-        s
-    }
-
-    public void insert(int pos){
+        fimL.setElemento(fimL.getElemento());
+        inicio = fimL;
 
     }
+
+    public No pop_back(){
+    No referencia = prim;
+    prim = prim.getProximo();
+        return referencia;
+
+    }
+    
+    public No pop_front(){
+        No aux = this.prim;
+        No fimL = prim;
+        if (fimL != null) {
+            fimL = fimL.getProximo();
+            aux.setProximo(aux.getProximo());
+        }
+        return aux;
+    }
+
+
+      
+    
+    //public void insert(int pos){
+        
+	//}
+
+
+    public void print() {
+        while (prim != null) {
+            System.out.print(prim.getElemento() + " ");
+            prim = prim.getProximo();
+        }
+    }
+
+
+
 
 
 }
