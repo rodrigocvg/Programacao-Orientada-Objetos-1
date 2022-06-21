@@ -23,27 +23,27 @@ public class Queue {
     }
 
     
-    public void push(int num) // insere novo elemento na Queue
+    public void push(int num) 
     {
         this.fila.push_back(num);
     }
     
-    public int size() // tamanho da Queue
+    public int size() 
     {
         return this.fila.size();
     }
     
-    public void pop() // remove o primeiro da Queue
+    public void pop() 
     {
         this.fila.pop_front();
     }
     
-   // public int front() // mostra quem esta em primeiro na Queue
-   // {
-     //   return this.fila.find_num(1);
-   // }
+   public int front() 
+    {
+        return this.fila.find_pos(1);
+   }
 
-    public void print() // imprimo a Queue
+    public void print() 
     {
         this.fila.print();
     }

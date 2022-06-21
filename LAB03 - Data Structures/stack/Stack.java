@@ -16,24 +16,23 @@ public class Stack {
         return this.stack;
     }
     
-    public void push(int num) // adicionar um elemento a lista
+    public void push(int num) 
     {
         this.stack.insert(num);
     }
 
-    //public int size() // tamanho da lista
-   // {
-    //    return this.stack.size();
-   // }
-    public void pop() // remover o elemento do topo da lista
+    public int size(){
+        return this.stack.size();
+    }
+    public void pop() 
     {
         this.stack.pop_front();
     }
-   // public int top() // quem esta no topo
-    //{
-  //      return this.stack.find_num(1);
-    //}
-    public void print() // imprime pilha.
+    public int top() 
+    {
+        return this.stack.find_pos(1);
+    }
+    public void print() 
     {
         this.stack.print();
     }
