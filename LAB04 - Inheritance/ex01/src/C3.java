@@ -51,7 +51,7 @@ public class C3 extends C2 {
     }
 
     public void mostrar_atributos(){
-        System.out.println(this.p1 + " " + this.p2 + " " + this.getP3() + " " + this.p4 + " " + this.p5 + " " + this.getP6() + this.p7 + " " + this.p8 + " " + this.p9);
+        System.out.println(this.p1 + " " + this.p2 + " " + this.getP3() + " " + this.p4 + " " + this.p5 + " " + this.getP6() +" " +  this.p7 + " " + this.p8 + " " + this.p9);
     }
     
     @Override

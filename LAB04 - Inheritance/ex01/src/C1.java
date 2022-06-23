@@ -41,7 +41,7 @@ public class C1 {
     public void mostrar_atributos(){
         System.out.println(this.p1 + " " + this.p2 + " " + this.p3);
     }
-    public void mostrar_atributos_super(){
-        System.out.println();
-    }
+   // public void mostrar_atributos_super(){
+       // System.out.println();
+    //}
 }

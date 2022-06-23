@@ -50,10 +50,10 @@ public class C2 extends C1{
         System.out.println(this.p1 + " " + this.p2 + " " + this.getP3() + " " + this.p4 + " " + this.p5 + " " + this.p6);
     }
 
-    @Override
+    
     public void mostrar_atributos_super(){
         super.mostrar_atributos();
-        System.out.println(" " + this.p4 + " " + this.p5 + " " + this.p6);
+        System.out.println(" " +this.p4 + " " + this.p5 +  " " + this.p6);
     }
 
 
