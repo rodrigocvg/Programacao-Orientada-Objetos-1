@@ -1,5 +1,13 @@
 {
     "java.project.sourcePaths": [
-        
+
+        "provas/p1/Prova1/src",
+        "LAB03 - Data Structures/stack",
+        "LAB03 - Data Structures/queue",
+        "LAB03 - Data Structures/list",
+        "LAB02 - First Java Code/ex03/src",
+        "LAB02 - First Java Code/ex02/src",
+        "LAB04 - Inheritance/ex01/ex1/src"
+
     ]
 }
