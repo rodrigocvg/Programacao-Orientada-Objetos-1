@@ -13,5 +13,9 @@ public class Forma {
         return this.area;
     }
 
+    public float obterVolume(){
+        return this.volume;
+    }
+
     
 }
