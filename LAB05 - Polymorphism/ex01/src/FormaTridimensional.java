@@ -1,4 +1,4 @@
-public class FormaTridimensional extends Forma{
+public abstract class FormaTridimensional extends Forma{
 
     
     

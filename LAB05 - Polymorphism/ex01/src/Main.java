@@ -8,9 +8,14 @@ public class Main {
 
         for(int i =0;i<3;i++){
             
-            System.out.println(forma[i].obterArea());
-        
+            if(forma[i].obterVolume() == 0){
+                System.out.println(forma[i].obterArea());
+            }
+            else{
                 System.out.println(forma[i].obterVolume());
+            }
+        
+                
             
             
         }

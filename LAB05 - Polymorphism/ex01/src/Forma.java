@@ -1,4 +1,4 @@
-public class Forma {
+public abstract class Forma {
     protected float area;
     protected float volume;
 
