@@ -17,5 +17,13 @@ public abstract class Forma {
         return this.volume;
     }
 
+    public void mostraInfo(){
+        
+    }
+
+    
+
+
+
     
 }

@@ -26,5 +26,11 @@ public class Tetraedro extends FormaTridimensional{
         return this.volume;
 
     }
+
+    @Override
+    public void mostraInfo() {
+        super.mostraInfo();
+        System.out.print("Tetraedro");
+    }
     
 }

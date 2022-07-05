@@ -21,6 +21,14 @@ public class Esfera extends FormaTridimensional{
 
     }
 
+    @Override
+    public void mostraInfo() {
+        super.mostraInfo();
+        System.out.print("Esfera");
+    }
+
+
+
 
     
 }

@@ -1,7 +1,7 @@
 public class Cubo extends FormaTridimensional{
-    private int lado;
+    private float lado;
 
-    public Cubo(int lado) {
+    public Cubo(float lado) {
         super();
         this.lado = lado;
     }
@@ -18,5 +18,13 @@ public class Cubo extends FormaTridimensional{
         this.volume = (float)Math.pow(lado, 3);
         return this.volume;
     }
+
+    @Override
+    public void mostraInfo() {
+        super.mostraInfo();
+        System.out.print("Cubo");
+    }
+    
+    
     
 }

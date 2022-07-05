@@ -10,4 +10,12 @@ public abstract class FormaTridimensional extends Forma{
     public float obterVolume(){
         return this.volume;
     }
+
+    @Override
+    public void mostraInfo() {
+        super.mostraInfo();
+    }
+
+    
+    
 }

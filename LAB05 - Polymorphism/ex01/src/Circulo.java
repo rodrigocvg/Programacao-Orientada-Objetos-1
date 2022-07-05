@@ -16,4 +16,13 @@ public class Circulo extends FormaBidimensional{
 
         return this.area;
     }
+
+
+    @Override
+    public void mostraInfo() {
+        super.mostraInfo();
+        System.out.print("Círculo");
+    }
+
+    
 }

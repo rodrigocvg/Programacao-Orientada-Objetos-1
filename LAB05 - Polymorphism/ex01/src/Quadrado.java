@@ -1,8 +1,8 @@
 public class Quadrado extends FormaBidimensional{
 
-    private int lado;
+    private float lado;
 
-    public Quadrado(int lado) {
+    public Quadrado(float lado) {
         super();
         this.lado = lado;
     }
@@ -12,5 +12,13 @@ public class Quadrado extends FormaBidimensional{
         this.area = this.lado * this.lado;
         return this.area;
     }
+
+    @Override
+    public void mostraInfo() {
+        super.mostraInfo();
+        System.out.print("Quadrado");
+    }
+
+    
     
 }

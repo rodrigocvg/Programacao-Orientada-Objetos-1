@@ -14,5 +14,11 @@ public class Triangulo extends FormaBidimensional{
         this.area = this.base * this.altura;
         return this.area;
     }
+
+    @Override
+    public void mostraInfo() {
+        super.mostraInfo();
+        System.out.print("Triângulo");
+    }
     
 }
