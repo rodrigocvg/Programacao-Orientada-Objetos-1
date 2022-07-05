@@ -67,5 +67,7 @@ public class Main {
                 System.out.println(" de volume igual a " + forma[i].obterVolume());
             }
         }
+
+        sc.close();
     }
 }
