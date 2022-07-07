@@ -9,8 +9,20 @@ public class Familia extends Contato{
     }
 
 
-
+    @Override
     public String imprimirContato(){
-        return super.imprimirBasico() + "\nParentesco: " + this.parentesco;
+        return this.imprimirBasico() + "\nParentesco: " + this.parentesco;
+    }
+
+
+    @Override
+    public String getParentesco() {
+        return this.parentesco;
+    }
+
+
+
+    public void setParentesco(String parentesco) {
+        this.parentesco = parentesco;
     }
 }

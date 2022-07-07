@@ -11,6 +11,15 @@ public class Amigos extends Contato{
         return super.imprimirBasico() + "\nGrau: " + this.grau;
     }
 
+    @Override
+    public int getGrau() {
+        return grau;
+    }
+
+    public void setGrau(int grau) {
+        this.grau = grau;
+    }
+
     
     
 }
