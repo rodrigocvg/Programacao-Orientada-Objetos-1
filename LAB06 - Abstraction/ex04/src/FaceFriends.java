@@ -88,7 +88,7 @@ public class FaceFriends {
                 case 3:
                     System.out.println("Imprimir apenas familiares ");
                     for(int j =0;j<i;j++){
-                        if(c[j].getParentesco() != null){
+                        if(c[j] instanceof Familia){
                             System.out.println("Contato  " + j + ": ");
                             System.out.println(c[j].imprimirContato());
                         }
@@ -101,7 +101,7 @@ public class FaceFriends {
                 case 4:
                     System.out.println("Imprimir apenas amigos");
                     for(int j =0;j<i;j++){
-                        if(c[j].getGrau() != 0){
+                        if(c[j] instanceof Amigos){
                             System.out.println("Contato  " + j + ": ");
                             System.out.println(c[j].imprimirContato());
                         }
@@ -110,7 +110,7 @@ public class FaceFriends {
                 case 5: 
                     System.out.println("Imprimir apenas colegas de trabalho");
                     for(int j =0;j<i;j++){
-                        if(c[j].getTipo() != null){
+                        if(c[j] instanceof Trabalho){
                             System.out.println("Contato  " + j + ": ");
                             System.out.println(c[j].imprimirContato());
                         }
