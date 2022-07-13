@@ -11,5 +11,14 @@ public class Trabalho extends Contato{
 
         return super.imprimirBasico() + "\nTipo: " + this.tipo;
     }
+
+    @Override
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
     
 }
