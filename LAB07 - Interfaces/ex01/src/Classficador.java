@@ -9,8 +9,8 @@ public class Classficador{
          pos = i + 1;
          for (int j = i + 2; j < a. length ; j++) {
          if (a[j]. eMenorQue ( menor )) { // encontrando o menor    elemento
-        menor = a[j];
-        pos = j;
+            menor = a[j];
+            pos = j;
          }
          }
          if ( menor . eMenorQue ( elem )) { // troca
