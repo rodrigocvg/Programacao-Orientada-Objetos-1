@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Queue {
 
     private ListaEncad fila;
@@ -23,9 +25,13 @@ public class Queue {
     }
 
     
-    public void push(int num) 
+    public void push(int num) throws NullPointerException, IndexOutOfBoundsException, IOException
     {
-        this.fila.push_back(num);
+        try{
+            this.fila.push_back(num);
+        }catch(IOException e){
+            System.out.println("Erro: "  + e.getLocalizedMessage());
+        }        
     }
     
     public int size() 
@@ -38,7 +44,7 @@ public class Queue {
         this.fila.pop_front();
     }
     
-   public int front() 
+   public int front() throws IOException
     {
         return this.fila.find_pos(1);
    }

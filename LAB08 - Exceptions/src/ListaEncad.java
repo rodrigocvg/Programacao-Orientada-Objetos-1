@@ -1,3 +1,9 @@
+import java.io.IOException;
+
+import javax.print.attribute.standard.NumberUp;
+
+
+
 public class ListaEncad {
     private No prim;
     private No ult;
@@ -8,7 +14,7 @@ public class ListaEncad {
         tam = 0;
     }
 
-    public void insert(int n) throws NullPointerException, IndexOutOfBoundsException{
+    public void insert(int n) throws NullPointerException, IndexOutOfBoundsException, IOException{
         if(prim==null) 
         {
             try{
@@ -36,7 +42,7 @@ public class ListaEncad {
             tam++;
         }
     }
-    public void erase_data(int n){
+    public void erase_data(int n) throws NullPointerException, IndexOutOfBoundsException{
         No fimL = prim.getProximo();
         No inicio = prim;
         
@@ -55,12 +61,12 @@ public class ListaEncad {
         System.gc();
         }
      
-    public void push_front(int i){
+    public void push_front(int i) throws NullPointerException, IndexOutOfBoundsException, IOException{
 
         No inicio = prim;
         No fimL = prim.getProximo();
-
-        while(fimL != null) 
+        try{
+            while(fimL != null) 
         {
             if (fimL.getElemento() == i) 
             {
@@ -84,9 +90,13 @@ public class ListaEncad {
             prim = prim.getProximo();
             inicio = inicio.getProximo();
         }
+        }catch(NullPointerException e){
+            System.out.println("Erro: " + e.getLocalizedMessage());
+        }
+        
     }
 
-    public void push_back(int i){
+    public void push_back(int i)throws NullPointerException, IndexOutOfBoundsException, IOException  {
         No inicio = prim;
         No fimL = prim.getProximo();
         
@@ -113,20 +123,35 @@ public class ListaEncad {
 
     }
 
-    public No pop_back(){
-    No referencia = prim;
-    prim = prim.getProximo();
+    public No pop_back()  throws NullPointerException{
+        No referencia = prim;
+        try{
+           
+        prim = prim.getProximo();
+        
+        }
+        catch(NullPointerException e){
+            System.out.println(e.getLocalizedMessage());
+        }
         return referencia;
+        
+        
+    
 
     }
     
-    public No pop_front(){
+    public No pop_front() throws NullPointerException{
         No aux = this.prim;
         No fimL = prim;
-        if (fimL != null) {
+        try{
             fimL = fimL.getProximo();
             aux.setProximo(aux.getProximo());
+        }catch(NullPointerException e){
+            System.out.println(e.getLocalizedMessage());
         }
+        
+           
+        
         return aux;
     }
 
@@ -147,16 +172,23 @@ public class ListaEncad {
 
 
 
-    public void print() {
-        while (prim != null) {
-            System.out.print(prim.getElemento() + " ");
-            prim = prim.getProximo();
+    public void print() throws NullPointerException{
+        try{
+            while (prim != null) {
+                System.out.print(prim.getElemento() + " ");
+                prim = prim.getProximo();
+            }
         }
+        catch(NullPointerException e ){
+            System.out.println(e.getMessage());
+        }
+        
     }
 
-    public int find_pos(int pos)
+    public int find_pos(int pos) throws NullPointerException, IndexOutOfBoundsException, IOException
     {
-        if(this.prim == null)
+        try{
+            if(this.prim == null)
         {
             System.out.println("Lista é nula");
         }
@@ -171,6 +203,10 @@ public class ListaEncad {
             }
         }
         System.out.println("Valor não encontrado");
+        }catch(NullPointerException e){
+            System.out.println(e.getMessage());
+        }
+        
         return -1;
     }
 

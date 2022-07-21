@@ -1,3 +1,6 @@
+
+import java.io.IOException;
+
 public class Stack {
     private ListaEncad stack;
 
@@ -16,9 +19,13 @@ public class Stack {
         return this.stack;
     }
     
-    public void push(int num) 
-    {
-        this.stack.insert(num);
+    public void push(int num)  throws IOException{
+        try{
+            this.stack.insert(num);
+        }
+        catch(IOException e){
+            System.out.println("Erro: " + e.getMessage());
+        }
     }
 
     public int size(){
@@ -28,7 +35,7 @@ public class Stack {
     {
         this.stack.pop_front();
     }
-    public int top() 
+    public int top() throws IOException
     {
         return this.stack.find_pos(1);
     }
