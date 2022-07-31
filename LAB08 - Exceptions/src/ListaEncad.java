@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-import javax.print.attribute.standard.NumberUp;
+
 
 
 
@@ -43,7 +43,8 @@ public class ListaEncad {
         }
     }
     public void erase_data(int n) throws NullPointerException, IndexOutOfBoundsException{
-        No fimL = prim.getProximo();
+        try{
+            No fimL = prim.getProximo();
         No inicio = prim;
         
         if(prim==null) 
@@ -59,7 +60,10 @@ public class ListaEncad {
         this.prim=null;
         this.ult=prim;
         System.gc();
+        }catch(NullPointerException e){
+            System.out.println("Erro: " + e.getMessage());
         }
+    }
      
     public void push_front(int i) throws NullPointerException, IndexOutOfBoundsException, IOException{
 
@@ -98,7 +102,8 @@ public class ListaEncad {
 
     public void push_back(int i)throws NullPointerException, IndexOutOfBoundsException, IOException  {
         No inicio = prim;
-        No fimL = prim.getProximo();
+        try{
+            No fimL = prim.getProximo();
         
         while(fimL != null) 
         {
@@ -121,6 +126,10 @@ public class ListaEncad {
             inicio = inicio.getProximo();
         }
 
+        }catch(NullPointerException e){
+            System.out.println(e.getMessage());
+        }
+        
     }
 
     public No pop_back()  throws NullPointerException{
