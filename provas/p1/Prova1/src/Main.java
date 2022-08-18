@@ -33,7 +33,7 @@ public class Main {
         for(i=0;i<n;i++){
             System.out.println("Digite o ponto e o raio: ");
             float x1[] = new float[30];
-            float y1[] = new float[30];
+            float y1[] = new float[30];// check:<<<erro:vetor criado todo passo do laço>>>>
             System.out.println("Digite o x: ");
             x1[i] = sc.nextFloat();
             System.out.println("Digite o x: ");
@@ -42,7 +42,7 @@ public class Main {
 
             System.out.println("Digite o raio: ");
 
-            float raio[] = new float[30];
+            float raio[] = new float[30];// check:<<<erro:vetor criado todo passo do laço>>>>
             
             raio[i] = sc.nextFloat();
             c[i] = new Circulo(p[i],raio[i]);
@@ -56,7 +56,7 @@ public class Main {
         double maior = 0;
         String nome = null;
         for(i=0;i<n;i++){
-            double area2[] = new double[30];
+            double area2[] = new double[30];// check:<<<erro: o vetor está sendo criado a cada passo do laço>>>>
             area2[i] = c[i].area();
                 if(area2[i]>maior){
                     maior = area2[i];

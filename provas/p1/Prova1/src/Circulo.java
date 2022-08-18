@@ -1,13 +1,14 @@
 
 
 public class Circulo {
-    private String pontoCentral;
+    private String pontoCentral;// check:<<<erro: string??>>>>
     private float raio;
     private double area; 
 
 
     public Circulo(){
-      
+      // check:<<<erro: era esperado no segundo construtor alguma funcionalidade >>>>
+
     
     }
 
